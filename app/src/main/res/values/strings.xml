@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">InfoShopping</string>
+
+    <string-array name="estados_array">
+        <item>Escolha um estado</item>
+        <item>Paraná</item>
+        <item>São Paulo</item>
+        <item>Rio de Janeiro</item>
+        <item>Rio Grande do Sul</item>
+        <item>Brasília</item>
+    </string-array>
+
 </resources>
