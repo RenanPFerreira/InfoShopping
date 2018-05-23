@@ -1,7 +1,9 @@
-package com.example.opet.infoshopping;
+package com.example.opet.infoshopping.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.opet.infoshopping.R;
 
 public class MainActivity extends AppCompatActivity {
 
