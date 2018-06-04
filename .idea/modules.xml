@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/InfoShopping.iml" filepath="$PROJECT_DIR$/InfoShopping.iml" />
-      <module fileurl="file://C:\Users\opet\Documents\GitHub\InfoShopping\InfoShopping.iml" filepath="C:\Users\opet\Documents\GitHub\InfoShopping\InfoShopping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/InfoShopping.iml" filepath="$PROJECT_DIR$/.idea/InfoShopping.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\opet\Documents\GitHub\InfoShopping\app\app.iml" filepath="C:\Users\opet\Documents\GitHub\InfoShopping\app\app.iml" />
     </modules>
   </component>
 </project>
