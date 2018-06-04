@@ -6,22 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.opet.infoshopping.Activity.MainActivity">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="176dp"
-        android:layout_height="53dp"
-        android:text="Cadastre-se"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="271dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="189dp"
-        android:layout_height="55dp"
-        android:text="ENTRAR"
-        tools:layout_editor_absoluteX="195dp"
-        tools:layout_editor_absoluteY="271dp" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -44,6 +28,33 @@
             android:layout_height="wrap_content"
             android:entries="@array/estados_array"
             android:textAlignment="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteY="58dp">
+
+            <Button
+                android:onClick="carregaItemMenu"
+                android:id="@+id/Entrar"
+                android:layout_width="189dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="ENTRAR"
+                tools:layout_editor_absoluteX="195dp"
+                tools:layout_editor_absoluteY="271dp" />
+
+            <Button
+                android:id="@+id/Cadastro"
+                android:onClick="carregaItemMenu"
+                android:layout_width="176dp"
+                android:layout_height="53dp"
+                android:layout_weight="1"
+                android:text="Cadastre-se"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="271dp" />
+        </LinearLayout>
 
     </LinearLayout>
 
