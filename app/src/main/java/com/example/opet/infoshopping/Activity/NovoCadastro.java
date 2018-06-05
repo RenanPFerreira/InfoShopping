@@ -1,14 +1,15 @@
 package com.example.opet.infoshopping.Activity;
 
-import android.app.Activity;
 import com.example.opet.infoshopping.R;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
 /**
  * Created by opet on 04/06/2018.
  */
 
 
-public class NovoCadastro extends Activity {
+public class NovoCadastro extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

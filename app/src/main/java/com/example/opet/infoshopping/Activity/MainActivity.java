@@ -15,19 +15,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void carregaItemMenu (View v){
-        switch (v.getId())
-        {
-            case R.id.Cadastro:
-                carregarIntent(NovoCadastro.class);
-            break;
-            case R.id.Entrar:
-                carregarIntent(Entrar.class);
-            break;
-        }
-    }
-    private void carregarIntent(Class classe){
-        Intent intent = new Intent(MainActivity.this,classe);
+    public void cadastrar(View view){
+
+        Intent intent = new Intent(MainActivity.this, NovoCadastro.class);
         startActivity(intent);
     }
+
+    public void logar(View view){
+
+        Intent intent = new Intent(this, Entrar.class);
+        startActivity(intent);
+    }
+
+
 }

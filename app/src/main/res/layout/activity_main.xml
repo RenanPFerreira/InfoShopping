@@ -36,24 +36,23 @@
             tools:layout_editor_absoluteY="58dp">
 
             <Button
-                android:onClick="carregaItemMenu"
-                android:id="@+id/Entrar"
-                android:layout_width="189dp"
-                android:layout_height="55dp"
-                android:layout_weight="1"
-                android:text="ENTRAR"
-                tools:layout_editor_absoluteX="195dp"
-                tools:layout_editor_absoluteY="271dp" />
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:onClick="logar"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="-2dp" />
 
             <Button
-                android:id="@+id/Cadastro"
-                android:onClick="carregaItemMenu"
-                android:layout_width="176dp"
-                android:layout_height="53dp"
-                android:layout_weight="1"
+                android:id="@+id/cadastro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Cadastre-se"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="271dp" />
+                android:onClick="cadastrar"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="-2dp" />
+
         </LinearLayout>
 
     </LinearLayout>
