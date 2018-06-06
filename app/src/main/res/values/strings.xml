@@ -14,17 +14,32 @@
     <string-array name="cidades_array_parana">
         <item>Escolha uma cidade</item>
         <item>Curitiba</item>
-        <item>Ponta Grossa</item>
-        <item>Paranaguá</item>
-        <item>Antonina</item>
-        <item>Araucária</item>
     </string-array>
 
     <string-array name="cidades_array_sao_paulo">
         <item>Escolha uma cidade</item>
         <item>São Paulo</item>
         <item>Campinas</item>
-        <item>Osasco</item>
     </string-array>
 
+    <string-array name="shoppings_array">
+        <item>Escolha um shopping</item>
+    </string-array>
+
+    <string-array name="shoppings_array_curitiba">
+        <item>Escolha um Shopping</item>
+        <item>Pátio Batel</item>
+        <item>Palladium</item>
+        <item>Barigui</item>
+    </string-array>
+
+    <string-array name="shoppings_array_sao_paulo">
+        <item>Escolha um Shopping</item>
+        <item>Bourbon Shopping</item>
+        <item>Top Center Shopping</item>
+    </string-array>
+
+    <string-array name="shoppings_array_campinas">
+        <item>Boa Vista</item>
+    </string-array>
 </resources>
