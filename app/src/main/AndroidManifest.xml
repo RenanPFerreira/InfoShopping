@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".Activity.NovoCadastro" />
         <activity android:name=".Activity.Entrar" />
+        <activity android:name=".Activity.ShoppingsActivity" />
+        <activity android:name=".Activity.LojasActivity" />
     </application>
 
 </manifest>
