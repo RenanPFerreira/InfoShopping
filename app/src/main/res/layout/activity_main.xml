@@ -22,38 +22,45 @@
             android:textColor="@color/accent_material_dark"
             android:textSize="50px" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150px"></LinearLayout>
+
         <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="wrap_content"
+            android:id="@+id/spinnerEstado"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/estados_array"
             android:textAlignment="center" />
 
+        <Spinner
+            android:id="@+id/spinnerCidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/cidades_array"
+            android:textAlignment="center" />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteY="58dp">
+            android:layout_height="150px"></LinearLayout>
 
-            <Button
-                android:id="@+id/login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Login"
-                android:onClick="logar"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="-2dp" />
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="logar"
+            android:text="Login"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="-2dp" />
 
-            <Button
-                android:id="@+id/cadastro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cadastre-se"
-                android:onClick="cadastrar"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="-2dp" />
-
-        </LinearLayout>
+        <Button
+            android:id="@+id/cadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="cadastrar"
+            android:text="Cadastre-se"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="-2dp" />
 
     </LinearLayout>
 

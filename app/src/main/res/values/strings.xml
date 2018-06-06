@@ -10,4 +10,24 @@
         <item>Brasília</item>
     </string-array>
 
+    <string-array name="cidades_array">
+        <item>Escolha uma cidade</item>
+    </string-array>
+
+    <string-array name="cidades_array_parana">
+        <item>Escolha uma cidade</item>
+        <item>Curitiba</item>
+        <item>Ponta Grossa</item>
+        <item>Paranaguá</item>
+        <item>Antonina</item>
+        <item>Araucária</item>
+    </string-array>
+
+    <string-array name="cidades_array_sao_paulo">
+        <item>Escolha uma cidade</item>
+        <item>São Paulo</item>
+        <item>Campinas</item>
+        <item>Osasco</item>
+    </string-array>
+
 </resources>
