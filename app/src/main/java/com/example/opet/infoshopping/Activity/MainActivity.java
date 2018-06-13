@@ -75,13 +75,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void cadastrar(View view){
 
-        Intent intent = new Intent(MainActivity.this, NovoCadastro.class);
+        Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
         startActivity(intent);
     }
 
     public void logar(View view){
 
-        Intent intent = new Intent(this, Entrar.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 

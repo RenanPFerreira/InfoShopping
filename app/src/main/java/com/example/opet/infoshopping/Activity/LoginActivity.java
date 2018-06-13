@@ -9,7 +9,7 @@ import com.example.opet.infoshopping.R;
  * Created by opet on 04/06/2018.
  */
 
-public class Entrar extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

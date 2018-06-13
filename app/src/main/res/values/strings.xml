@@ -42,4 +42,19 @@
     <string-array name="shoppings_array_campinas">
         <item>Boa Vista</item>
     </string-array>
+
+
+    <string name="salvar">Salvar</string>
+    <string name="voltar">Voltar</string>
+    <string name="nome_obrigatorio">O nome é de preenchimento obrigatório!</string>
+    <string name="cpf_obrigatorio">O CPF é de preenchimento obrigatório!</string>
+    <string name="email_valido">Necessário inserir um email válido!</string>
+    <string name="senha_valida">Necessário inserir uma senha válida!</string>
+    <string name="registro_salvo_sucesso">Registro salvo com sucesso!</string>
+
+
+
+
+
+
 </resources>
