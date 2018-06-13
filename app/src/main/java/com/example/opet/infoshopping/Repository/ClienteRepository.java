@@ -4,12 +4,15 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
+import android.database.sqlite.SQLiteDatabase;
 
 import com.example.opet.infoshopping.Model.Cliente;
 import com.example.opet.infoshopping.Util.BancoUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.database.sqlite.SQLiteDatabase.openOrCreateDatabase;
 
 /**
  * Created by opet on 13/06/2018.

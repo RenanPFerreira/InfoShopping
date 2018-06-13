@@ -5,8 +5,10 @@ import com.example.opet.infoshopping.R;
 import com.example.opet.infoshopping.Repository.ClienteRepository;
 import com.example.opet.infoshopping.Util.Util;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -31,6 +33,14 @@ public class CadastroActivity extends AppCompatActivity {
 
         this.CriarComponentes();
 
+        buttonSalvar.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                salvar();
+            }
+        });
     }
 
     protected  void CriarComponentes(){
@@ -43,7 +53,7 @@ public class CadastroActivity extends AppCompatActivity {
         buttonVoltar = (Button) this.findViewById(R.id.voltar);
     }
 
-    protected  void Salvar_onClick() {
+    public void salvar() {
 
         if (editTextNome.getText().toString().trim().equals("")) {
 
@@ -101,8 +111,11 @@ public class CadastroActivity extends AppCompatActivity {
             editTextSenha.setText(null);
         }
 
+    public void voltar(View view){
 
-
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 
     }
 

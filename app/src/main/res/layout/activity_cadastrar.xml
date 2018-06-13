@@ -47,12 +47,14 @@
 
     <Button
         android:id="@+id/salvar"
+        android:onClick="salvar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/salvar" />
 
     <Button
         android:id="@+id/voltar"
+        android:onClick="voltar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/voltar" />

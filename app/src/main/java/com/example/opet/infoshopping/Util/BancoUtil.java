@@ -29,7 +29,7 @@ public class BancoUtil extends SQLiteOpenHelper {
         stringBuilderCreateTable.append("        ds_nome        TEXT    NOT NULL,            ");
         stringBuilderCreateTable.append("        ds_cpf         LONG    NOT NULL,            ");
         stringBuilderCreateTable.append("        ds_email       TEXT    NOT NULL,            ");
-        stringBuilderCreateTable.append("        ds_senha       TEXT    NOT NULL,            ");
+        stringBuilderCreateTable.append("        ds_senha       TEXT    NOT NULL             )");
 
 
         db.execSQL(stringBuilderCreateTable.toString());
