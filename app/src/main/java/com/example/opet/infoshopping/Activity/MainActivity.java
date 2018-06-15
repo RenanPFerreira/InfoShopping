@@ -87,6 +87,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
-
+    public void pesquisar (View view){
+        Intent intent = new Intent(this, ShoppingsActivity.class);
+        startActivity(intent);
+    }
 
 }

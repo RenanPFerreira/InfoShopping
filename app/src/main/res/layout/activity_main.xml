@@ -45,7 +45,8 @@
             android:layout_height="150px"></LinearLayout>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/pesquisar"
+            android:onClick="pesquisar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Pesquisar" />
