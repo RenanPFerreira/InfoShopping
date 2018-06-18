@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(position != 0){
                     String selecionada = estadoSpinner.getSelectedItem().toString();
-                    String[] cidades = getResources().getStringArray(R.array.cidades_array);;
+                    String[] cidades = getResources().getStringArray(R.array.cidades_array);
                     switch (selecionada){
                         case "Paraná":
                             cidades  = getResources().getStringArray(R.array.cidades_array_parana);
@@ -88,8 +88,19 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void pesquisar (View view){
-        Intent intent = new Intent(this, ShoppingsActivity.class);
-        startActivity(intent);
+        String selecionada = cidadeSpinner.getSelectedItem().toString();
+        switch (selecionada){
+            case "Curitiba":
+                Intent intent = new Intent(this, ShoppingsActivity.class);
+                startActivity(intent);
+                break;
+            case "São Paulo":
+            Toast.makeText(MainActivity.this, "Cidade ainda não implementada", Toast.LENGTH_SHORT).show();
+                break;
+            case "Campinas":
+                Toast.makeText(MainActivity.this, "Cidade ainda não implementada", Toast.LENGTH_SHORT).show();
+                break;
+        }
     }
 
 }

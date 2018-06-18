@@ -4,6 +4,7 @@ import com.example.opet.infoshopping.Model.Cliente;
 import com.example.opet.infoshopping.R;
 import com.example.opet.infoshopping.Repository.ClienteRepository;
 import com.example.opet.infoshopping.Util.Util;
+import com.example.opet.infoshopping.Model.Cliente;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by opet on 04/06/2018.
@@ -31,91 +33,28 @@ public class CadastroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar);
 
-        this.CriarComponentes();
-
-        buttonSalvar.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                salvar();
-            }
-        });
+        editTextEmail = (EditText) findViewById(R.id.editEmail);
+        editTextSenha = (EditText) findViewById(R.id.editSenha);
     }
 
-    protected  void CriarComponentes(){
+    public void gravarCliente(View v){
+        Cliente cliente = new Cliente();
+        String email = editTextEmail.getText().toString();
+        String senha = editTextSenha.getText().toString();
 
-        editTextNome = (EditText) this.findViewById(R.id.editNome);
-        editTextCpf = (EditText) this.findViewById(R.id.editCpf);
-        editTextEmail = (EditText) this.findViewById(R.id.editEmail);
-        editTextSenha = (EditText) this.findViewById(R.id.editSenha);
-        buttonSalvar = (Button) this.findViewById(R.id.salvar);
-        buttonVoltar = (Button) this.findViewById(R.id.voltar);
-    }
+        cliente.setEmail(email);
+        cliente.setSenha(Util.toMD5(senha));
 
-    public void salvar() {
-
-        if (editTextNome.getText().toString().trim().equals("")) {
-
-            Util.Alert(this, this.getString(R.string.nome_obrigatorio));
-
-            editTextNome.requestFocus();
-        } else if (editTextCpf.getText().toString().trim().equals("")) {
-
-            Util.Alert(this, this.getString(R.string.cpf_obrigatorio));
-
-            editTextCpf.requestFocus();
-
-        } else if (editTextEmail.getText().toString().trim().equals("")) {
-
-            Util.Alert(this, this.getString(R.string.email_valido));
-
-            editTextEmail.requestFocus();
-
-        } else if (editTextSenha.getText().toString().trim().equals("")) {
-
-            Util.Alert(this, this.getString(R.string.senha_valida));
-
-            editTextSenha.requestFocus();
-
-        } else {
-
-
-            /*CRIANDO UM OBJETO PESSOA*/
-            Cliente cliente = new Cliente();
-
-            /*SETANDO O VALOR DO CAMPO NOME*/
-            cliente.setNome(editTextNome.getText().toString().trim());
-
-            cliente.setCPF(Long.parseLong(editTextCpf.getText().toString().trim()));
-
-            cliente.setEmail(editTextEmail.getText().toString().trim());
-
-            cliente.setSenha(editTextSenha.getText().toString().trim());
-
-            /*SALVANDO UM NOVO REGISTRO*/
-            new ClienteRepository(this).Salvar(cliente);
-
-            /*MENSAGEM DE SUCESSO!*/
-            Util.Alert(this, this.getString(R.string.registro_salvo_sucesso));
-
-            LimparCampos();
+        ClienteRepository clienteRepository = new ClienteRepository(this);
+        long result = clienteRepository.insereDado(cliente);
+        if(result > 0){
+            Toast.makeText(this, "Usuário Cadastrado!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(CadastroActivity.this,LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        else{
+            Toast.makeText(this, "Usuário não Cadastrado.", Toast.LENGTH_SHORT).show();
         }
     }
-
-        protected void LimparCampos(){
-
-            editTextNome.setText(null);
-            editTextEmail.setText(null);
-            editTextCpf.setText(null);
-            editTextSenha.setText(null);
-        }
-
-    public void voltar(View view){
-
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
-    }
-
+}
