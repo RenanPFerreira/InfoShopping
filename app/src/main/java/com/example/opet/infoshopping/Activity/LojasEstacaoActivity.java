@@ -6,15 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import com.example.opet.infoshopping.R;
 
 /**
- * Created by opet on 06/06/2018.
+ * Created by opet on 18/06/2018.
  */
 
-public class LojasActivity extends AppCompatActivity {
+public class LojasEstacaoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lojas);
+        setContentView(R.layout.activity_lojas_estacao);
     }
-
 }

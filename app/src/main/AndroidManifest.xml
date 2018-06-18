@@ -19,7 +19,8 @@
         <activity android:name=".Activity.CadastroActivity" />
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.ShoppingsActivity" />
-        <activity android:name=".Activity.LojasActivity" />
+        <activity android:name=".Activity.LojasPalladiumActivity" />
+        <activity android:name=".Activity.LojasEstacaoActivity"/>
     </application>
 
 </manifest>
