@@ -9,16 +9,28 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.opet.infoshopping.Model.Cliente;
 import com.example.opet.infoshopping.R;
+import com.example.opet.infoshopping.Repository.ClienteRepository;
 import com.facebook.stetho.Stetho;
 
 public class MainActivity extends AppCompatActivity {
 
     Spinner estadoSpinner;
     Spinner cidadeSpinner;
+    public static Cliente clienteLogado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+       /* Intent resultado = getIntent();
+        long id = resultado.getLongExtra("ID_USUARIO",0);
+
+        if (clienteLogado == null){
+            clienteLogado = new ClienteRepository(this).carregaClientePorID(id);
+        }*/
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -76,17 +88,31 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+
+
+
+
+
+
     public void cadastrar(View view){
 
         Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
         startActivity(intent);
     }
 
+
     public void logar(View view){
 
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
+
+    public void listar (View view ){
+        Intent intent = new Intent(this, ListarClientesActivity.class);
+        startActivity(intent);
+    }
+
     public void pesquisar (View view){
         String selecionada = cidadeSpinner.getSelectedItem().toString();
         switch (selecionada){
@@ -102,5 +128,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+
 
 }

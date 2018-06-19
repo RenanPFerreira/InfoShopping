@@ -46,13 +46,16 @@
 
     <string name="salvar">Salvar</string>
     <string name="voltar">Voltar</string>
+    <string name="remover">Remover</string>
     <string name="nome_obrigatorio">O nome é de preenchimento obrigatório!</string>
     <string name="cpf_obrigatorio">O CPF é de preenchimento obrigatório!</string>
     <string name="email_valido">Necessário inserir um email válido!</string>
     <string name="senha_valida">Necessário inserir uma senha válida!</string>
     <string name="registro_salvo_sucesso">Registro salvo com sucesso!</string>
 
-
+    <string name="confirma_msg">Tem certeza que deseja remover este cliente do sistema?</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="titulo_remove">Remover Cliente.</string>
 
 
 

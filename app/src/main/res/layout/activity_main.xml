@@ -50,7 +50,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Pesquisar" />
-
+        <Button
+            android:id="@+id/listar"
+            android:onClick="listar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Listar Clientes" />
         <Button
             android:id="@+id/login"
             android:layout_width="match_parent"

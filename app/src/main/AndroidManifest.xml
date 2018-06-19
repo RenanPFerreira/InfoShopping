@@ -21,6 +21,7 @@
         <activity android:name=".Activity.ShoppingsActivity" />
         <activity android:name=".Activity.LojasPalladiumActivity" />
         <activity android:name=".Activity.LojasEstacaoActivity"/>
+        <activity android:name=".Activity.ListarClientesActivity"/>
     </application>
 
 </manifest>

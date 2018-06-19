@@ -51,6 +51,9 @@ public class ClienteRepository {
 
     }
 
+
+
+
     public Cliente carregaClientePorID(int id){
         Cursor cursor;
         String[] campos = {BancoUtil.ID_CLIENTE, BancoUtil.NOME_CLIENTE,
@@ -102,6 +105,43 @@ public class ClienteRepository {
         return cursor;
     }
 
+
+    public List<Cliente> carregaDadosLista() {
+        Cursor cursor = null;
+           cursor = carregaDados(1);
+
+        List<Cliente> clientes = new ArrayList<>();
+
+        try {
+            if(cursor.getCount() > 0) {
+                do {
+                    Cliente cliente = new Cliente();
+                    int ID = cursor.getInt(cursor.getColumnIndexOrThrow(BancoUtil.ID_CLIENTE));
+                    String nome = cursor.getString(cursor.getColumnIndexOrThrow(BancoUtil.NOME_CLIENTE));
+                    String email = cursor.getString(cursor.getColumnIndexOrThrow(BancoUtil.EMAIL));
+                    String senha = cursor.getString(cursor.getColumnIndexOrThrow(BancoUtil.SENHA));
+                    long cpf = cursor.getLong(cursor.getColumnIndexOrThrow(BancoUtil.CPF));
+
+
+                    cliente.setID(ID);
+                    cliente.setNome(nome);
+                    cliente.setCPF(cpf);
+                    cliente.setEmail(email);
+                    cliente.setSenha(senha);
+                    clientes.add(cliente);
+
+                } while (cursor.moveToNext());
+            }
+        } finally {
+            cursor.close();
+        }
+
+        return clientes;
+    }
+
+
+
+
     public void deletaRegistro(int id_cliente){
         String where = BancoUtil.ID_CLIENTE + "=" + id_cliente;
         db = banco.getReadableDatabase();
@@ -150,4 +190,5 @@ public class ClienteRepository {
             return cursor.getInt(cursor.getColumnIndexOrThrow(BancoUtil.ID_CLIENTE));
         return -1;
     }
+
 }

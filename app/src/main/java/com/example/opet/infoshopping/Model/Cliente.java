@@ -12,7 +12,7 @@ import android.arch.persistence.room.PrimaryKey;
 public class Cliente {
 
     @PrimaryKey(autoGenerate = true)
-    private Integer ID;
+    private int ID;
 
     @ColumnInfo(name = "Nome_Cliente")
     private String nome;
@@ -23,11 +23,11 @@ public class Cliente {
 
     private String senha;
 
-    public Integer getID() {
+    public int getID() {
         return ID;
     }
 
-    public void setID(Integer ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
 
