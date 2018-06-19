@@ -89,15 +89,13 @@ public class ClienteRepository {
         return cliente;
     }
 
-    public Cursor carregaDados(long id_usuario) {
+    public Cursor carregaDados() {
         Cursor cursor;
         String[] campos = {BancoUtil.ID_CLIENTE, BancoUtil.NOME_CLIENTE, BancoUtil.EMAIL, BancoUtil.CPF,
                 BancoUtil.SENHA};
         db = banco.getReadableDatabase();
 
-        String where = BancoUtil.ID_CLIENTE + "=" + id_usuario;
-
-        cursor = db.query(BancoUtil.TABELA_CLIENTE, campos, where, null, null, null, null, null);
+        cursor = db.query(BancoUtil.TABELA_CLIENTE, campos, null, null, null, null, null);
         if (cursor != null) {
             cursor.moveToFirst();
         }
@@ -108,7 +106,7 @@ public class ClienteRepository {
 
     public List<Cliente> carregaDadosLista() {
         Cursor cursor = null;
-           cursor = carregaDados(1);
+           cursor = carregaDados();
 
         List<Cliente> clientes = new ArrayList<>();
 

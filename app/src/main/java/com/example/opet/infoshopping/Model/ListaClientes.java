@@ -7,6 +7,7 @@ import java.util.List;
  */
 
 public class ListaClientes {
+
     private static List<Cliente> clientes;
 
     public static List<Cliente> getList(){

@@ -29,13 +29,14 @@ public class ListarClientesActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_clientes);
 
+
+        carregarElementos();
     }
 
-     /*public void carregarElementos() {
+     public void carregarElementos() {
         listaClientes = (ListView) findViewById(R.id.listClientes);
         clienteRepository = new ClienteRepository(this);
-        List<Cliente> clientes = clienteRepository.carregaDadosLista
-                (MainActivity.clienteLogado.getID());
+        List<Cliente> clientes = clienteRepository.carregaDadosLista();
         myAdapter = new ClienteAdapter(this, R.layout.item_activity_cliente, clientes);
         listaClientes.setAdapter(myAdapter);
         listaClientes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -49,6 +50,6 @@ public class ListarClientesActivity extends Activity {
                 startActivity(atualizarIntent);
             }
         });
-    }*/
+    }
 }
 
