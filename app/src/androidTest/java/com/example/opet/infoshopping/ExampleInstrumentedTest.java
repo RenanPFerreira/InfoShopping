@@ -32,6 +32,7 @@ public class ExampleInstrumentedTest {
         assertEquals("com.example.opet.infoshopping", appContext.getPackageName());
     }
 
+
     public void insereDado() throws Exception {
 
         //region Criando o Cliente
@@ -68,6 +69,7 @@ public class ExampleInstrumentedTest {
 
     }
 
+    @Test
     public void DeletandoDados() throws Exception {
         //Deletando o Empregado utilizando o ID como parametro
 
@@ -76,7 +78,7 @@ public class ExampleInstrumentedTest {
         SQLiteDatabase db;
         DatabaseFactory banco = new DatabaseFactory(appContext);
         ClienteRepository clienteRepository = new ClienteRepository();
-        int id = 8;
+        int id = 5;
         String where = BancoUtil.ID_CLIENTE + "=" + id;
         db = banco.getReadableDatabase();
         db.delete(BancoUtil.TABELA_CLIENTE, where, null);
@@ -92,7 +94,7 @@ public class ExampleInstrumentedTest {
                 BancoUtil.CPF};
         db = banco.getReadableDatabase();
 
-        String condicao = BancoUtil.ID_CLIENTE + " = " + 8;
+        String condicao = BancoUtil.ID_CLIENTE + " = " + 5;
 
         cursor = db.query(BancoUtil.TABELA_CLIENTE, campos, condicao, null, null, null, null, null);
         if (cursor != null) {
@@ -114,6 +116,7 @@ public class ExampleInstrumentedTest {
         }
         //endregion
     }
+
 
     @Test
     public void UpdateMetodo() throws Exception{
